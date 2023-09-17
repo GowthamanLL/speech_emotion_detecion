@@ -109,28 +109,7 @@ def prediction():
             emotion = predict_emotion(pred, audio_info.samplerate)
             st.success(f"Predicted Emotion: {emotion}")
     
-def visualization():
-    st.write("## Exploratory Data Visualization")
-    col1, col2 = st.columns(2)
 
-    original = Image.open('spec-happy.png')
-    col1.header("Spectogram of Happy")
-    col1.image(original, use_column_width=True)
-
-    grayscale = Image.open('spec-sad.png')
-    col2.header("Spectogram of Sad")
-    col2.image(grayscale, use_column_width=True)
-    
-    col3, col4 = st.columns(2)
-
-    original1 = Image.open('wave-angry.png')
-    col3.header("Wave form of Angry")
-    col3.image(original1, use_column_width=True)
-
-    grayscale1 = Image.open('wave-disgust.png')
-    col4.header("Wave form of Disgust")
-    col4.image(grayscale1, use_column_width=True)
-        
 
 
 
