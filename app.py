@@ -24,25 +24,7 @@ def home():
     col1, col2,col3 = st.columns(3)
 
     
-    col1.header(" Happy 😊")
-   
-
-
-    col2.header("Sad 😭")
-    
-    
-    col3.header("Disgust 🤢")
-    
-    
-    col4, col5,col6 = st.columns(3)
-
-    
-    col4.header("Angry 😡")
-    
-    
-    col5.header("Fear 😨")
-    
-    col6.header("Surprise 🙀")
+    col1.header(" Happy","Sad","Disguest","Angry","Fear","Surprise")
     
 # Define the prediction function
 def predict_emotion(audio_data, sample_rate):
