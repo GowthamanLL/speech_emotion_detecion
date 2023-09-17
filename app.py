@@ -100,7 +100,5 @@ def main():
         home()
     elif page == "Prediction":
         prediction()
-    elif page == "Exploratory Data Visualization":
-        visualization()
    
 main()
