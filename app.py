@@ -55,27 +55,6 @@ def prediction():
             emotion = predict_emotion(pred, audio_info.samplerate)
             st.success(f"Predicted Emotion: {emotion}")
 
-    
-    uploaded_audio = "happy.wav"
-    if uploaded_audio:
-        # Display audio file details
-        audio_info = sf.info(uploaded_audio)
-        st.audio(uploaded_audio, format="audio/wav")
-        st.write(f"Audio File Details:\n"
-                 f"Duration: {audio_info.duration} seconds\n"
-                 f"Sample Rate: {audio_info.samplerate} Hz\n"
-                 f"Channels: {audio_info.channels}")
-         # Predict emotion
-        if st.button("Predict Emotion"):
-            st.info("Predicting emotion... Please wait.")
-            # st.audio(audio_file, format='audio/wav')
-            # audio_data= sf.read(uploaded_audio)
-            mfcc_features = extract_mfcc_for_prediction(uploaded_audio)
-            pred = np.expand_dims(mfcc_features, axis=0)
-            pred = np.expand_dims(pred, axis=-1)
-            emotion = predict_emotion(pred, audio_info.samplerate)
-            st.success(f"Predicted Emotion: {emotion}")
-
        
 
     # Record audio
