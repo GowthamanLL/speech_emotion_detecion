@@ -92,7 +92,7 @@ def main():
     st.set_page_config(layout="wide")
     st.title("Speech Emotion Recoginition App")
 # Create the tab layout
-    tabs = ["Home", "Prediction", "Exploratory Data Visualization"]
+    tabs = ["Home", "Prediction"]
     page = st.sidebar.selectbox("Select a page", tabs)
 
 # Show the appropriate page based on the user selection
